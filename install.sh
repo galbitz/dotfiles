@@ -75,7 +75,8 @@ function install_applications {
       fi
     else
       echo "Cannot determine distribution type"
-    fi    
+    fi
+    return 0    
   fi
 
   echo "No OS detected. Skipping applications"
@@ -85,15 +86,18 @@ echo "Dotfile install started."
 
 echo "Installing bash extras"
 add_bash_extra
+
 echo "Installing starship"
 install_starship
+
 echo "Adding symlinks"
 linkDotfile .bashrc_extra
+mkdir -p $HOME/.config
 linkDotfile .config/starship.toml
-
-source ~/.bashrc
 
 echo "Install additonal applications"
 install_applications
+
+source ~/.bashrc
 
 echo "Dotfile install finished."
