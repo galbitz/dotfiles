@@ -1,0 +1,8 @@
+
+# Add ~/.local/bin to path if it hasn't been added
+[[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:${PATH}"
+
+# Init starship prompt
+if command -v starship &> /dev/null; then
+    eval "$(starship init bash)"
+fi
