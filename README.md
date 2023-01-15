@@ -14,5 +14,4 @@ git clone https://github.com/galbitz/dotfiles
 * https://dotfiles.github.io/
 * https://github.com/tomnomnom/dotfiles/blob/master/setup.sh
 * https://victoria.dev/blog/how-to-set-up-a-fresh-ubuntu-desktop-using-only-dotfiles-and-bash-scripts/
-
-
+* https://github.com/chrisfarber/dotfiles

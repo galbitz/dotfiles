@@ -58,7 +58,7 @@ function install_applications {
 
   if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "MacOS detected"
-    source ${dotfilesDir}/install_macos.sh
+    source ${dotfilesDir}/scripts/install_macos.sh
     return 0
   fi
 
@@ -69,7 +69,7 @@ function install_applications {
       OS=$NAME
       if [[ "$OS" == "Ubuntu" ]]; then
         echo "Running install for $OS"
-        source ${dotfilesDir}/install_ubuntu.sh
+        source ${dotfilesDir}/scripts/install_ubuntu.sh
       else
         echo "Don't know how to install apps on $OS"
       fi
@@ -80,6 +80,11 @@ function install_applications {
   fi
 
   echo "No OS detected. Skipping applications"
+}
+
+function config_git {
+  echo "Running git configuration"
+  source ${dotfilesDir}/scripts/config_git.sh
 }
 
 echo "Dotfile install started."
@@ -94,6 +99,9 @@ echo "Adding symlinks"
 linkDotfile .bashrc_extra
 mkdir -p $HOME/.config
 linkDotfile .config/starship.toml
+
+echo "Configuring git"
+config_git
 
 echo "Install additonal applications"
 install_applications
