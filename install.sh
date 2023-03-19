@@ -99,6 +99,8 @@ echo "Adding symlinks"
 linkDotfile .bashrc_extra
 mkdir -p $HOME/.config
 linkDotfile .config/starship.toml
+linkDotfile .tmux.conf
+linkDotfile .tmux
 
 echo "Configuring git"
 config_git
@@ -108,4 +110,4 @@ install_applications
 
 source ~/.bashrc
 
-echo "Dotfile install finished."
+echo "Dotfile install completed."

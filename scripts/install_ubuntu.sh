@@ -12,7 +12,7 @@ function install {
 }
 
 if sudo -n true 2>/dev/null; then
-  sudo apt update
+  sudo apt -qq update 
   install curl
   install git
   install htop
