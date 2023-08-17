@@ -22,3 +22,7 @@ disabled = false
 [username]
 disabled = false
 show_always = true
+
+[battery]
+disabled = true
+
