@@ -16,6 +16,7 @@ function add_textblock_to_file {
 }
 
 function install_starship {
+    mkdir -p $HOME/.local/bin
     bindir=$([ "$cansudo" -ne 0 ] && echo --bin-dir $HOME/.local/bin)
     curl -sS https://starship.rs/install.sh | sh -s --  --force $bindir
 }
