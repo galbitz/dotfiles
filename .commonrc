@@ -2,7 +2,15 @@
 # Add ~/.local/bin to path if it hasn't been added
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && PATH="$HOME/.local/bin:${PATH}"
 
+shell="$SHELL"
+if [ -n "$shell" ]; then
+    shell_name=$(basename "$shell")
+fi
+
 # Init starship prompt
 if command -v starship &> /dev/null; then
-    eval "$(starship init bash)"
+    eval "$(starship init $shell_name)"
 fi
+
+command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
+[ true ]

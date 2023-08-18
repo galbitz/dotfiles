@@ -5,22 +5,18 @@ dotfilesDir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 sudo -n true 2>/dev/null
 cansudo=$?
 
-function add_bash_extra {
-    text_block=$(cat <<EOF
-# dotfile block starts
-source \$HOME/.bashrc_extra
-# dotfile block ends
+function add_textblock_to_file {
+    text_block="$1"
+    rcfile="$HOME/$2"
 
-EOF
-)
-    bashfile="$HOME/.bashrc"
-    if ! grep -qF "$text_block" "$bashfile"; then
+    if ! grep -qF "$text_block" "$rcfile"; then
         echo "Adding bash extra to bashfile"
-        echo "$text_block" >> "$bashfile"
+        echo "$text_block" >> "$rcfile"
     fi
 }
 
 function install_starship {
+    mkdir -p $HOME/.local/bin
     bindir=$([ "$cansudo" -ne 0 ] && echo --bin-dir $HOME/.local/bin)
     curl -sS https://starship.rs/install.sh | sh -s --  --force $bindir
 }
@@ -89,14 +85,22 @@ function config_git {
 
 echo "Dotfile install started."
 
-echo "Installing bash extras"
-add_bash_extra
+echo "Installing commonrc"
+text_block_to_add=$(cat <<EOF
+# dotfile block starts
+source \$HOME/.commonrc
+# dotfile block ends
+
+EOF
+)
+add_textblock_to_file "$text_block_to_add", ".bashrc"
+add_textblock_to_file "$text_block_to_add", ".zshrc"
 
 echo "Installing starship"
 install_starship
 
 echo "Adding symlinks"
-linkDotfile .bashrc_extra
+linkDotfile .commonrc
 mkdir -p $HOME/.config
 linkDotfile .config/starship.toml
 linkDotfile .tmux.conf
@@ -107,7 +111,5 @@ config_git
 
 echo "Install additonal applications"
 install_applications
-
-source ~/.bashrc
 
 echo "Dotfile install completed."
