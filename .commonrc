@@ -13,3 +13,4 @@ if command -v starship &> /dev/null; then
 fi
 
 command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
+[ true ]
