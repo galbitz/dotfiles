@@ -12,5 +12,5 @@ if command -v starship &> /dev/null; then
     eval "$(starship init $shell_name)"
 fi
 
-command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
-[ true ]
+#command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
+#[ true ]
