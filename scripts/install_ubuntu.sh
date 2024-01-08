@@ -20,4 +20,6 @@ if sudo -n true 2>/dev/null; then
   install mc
   install tmux
   install wget
+  install tldr
+  install autojump
 fi
