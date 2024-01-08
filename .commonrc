@@ -15,4 +15,4 @@ fi
 #command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
 #[ true ]
 
-/usr/share/autojump/autojump.sh
+source /usr/share/autojump/autojump.sh
