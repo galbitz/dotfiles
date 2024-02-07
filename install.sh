@@ -103,8 +103,9 @@ echo "Adding symlinks"
 linkDotfile .commonrc
 mkdir -p $HOME/.config
 linkDotfile .config/starship.toml
-linkDotfile .tmux.conf
-linkDotfile .tmux
+mkdir -p $HOME/.config/tmux
+linkDotfile .config/tmux/tmux.conf
+linkDotfile .config/tmux/plugins
 
 echo "Configuring git"
 config_git

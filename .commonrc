@@ -16,3 +16,6 @@ fi
 #[ true ]
 
 source /usr/share/autojump/autojump.sh
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
