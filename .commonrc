@@ -15,7 +15,5 @@ fi
 #command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
 #[ true ]
 
-source /usr/share/autojump/autojump.sh
-
 export XDG_CONFIG_HOME="$HOME/.config"
 
