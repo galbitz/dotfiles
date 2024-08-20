@@ -13,5 +13,5 @@ keys=`curl https://api.github.com/users/$USERNAME/keys | grep -o -E "ssh-\w+\s+[
 
 for key in $keys; do
   echo $key
-  grep -q "$key" ~/.ssh/authorized_keys || echo "$key" &gt;&gt; ~/.ssh/authorized_keys
+  grep -q "$key" ~/.ssh/authorized_keys || echo "$key" >> ~/.ssh/authorized_keys
 done
