@@ -11,11 +11,11 @@ echo "Installing fonts"
 mkdir -p ~/.local/share/fonts/
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip
-unzip CascadiaMono.zip -d ~/.local/share/fonts/CascadiaMono
+unzip -o CascadiaMono.zip -d ~/.local/share/fonts/CascadiaMono
 rm CascadiaMono.zip
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip
-unzip FiraCode.zip-d ~/.local/share/fonts/FiraCode
+unzip -o FiraCode.zip -d ~/.local/share/fonts/FiraCode
 rm FiraCode.zip
 
 fc-cache -f -v
