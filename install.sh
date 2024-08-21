@@ -12,8 +12,8 @@ fi
 
 echo "Running installers"
 source install/terminal.sh
-
 source ~/.commonrc
+source install/desktop.sh
 
 echo "Dotfile install completed."
 
