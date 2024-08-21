@@ -20,7 +20,7 @@ scripts/install_pulseaudio_sources_apt.sh
 
 ./bootstrap && ./configure PULSE_DIR=~/pulseaudio.src
 
-make install
+sudo make install
 
 popd
 
