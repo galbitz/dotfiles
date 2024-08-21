@@ -16,4 +16,4 @@ source ~/.commonrc
 source install/desktop.sh
 
 echo "Dotfile install completed."
-
+echo "Reboot"
