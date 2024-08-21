@@ -1,6 +1,6 @@
 # global helper functions
 
-function add_textblock_to_file {
+function add_textblock_to_file() {
     text_block="$1"
     rcfile="$HOME/$2"
 
@@ -10,7 +10,7 @@ function add_textblock_to_file {
     fi
 }
 
-function is_debian (
+function is_debian() {
  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     if [ -f /etc/os-release ]; then
       . /etc/os-release
@@ -21,9 +21,9 @@ function is_debian (
     fi
   fi
   return 1
-)
+}
 
-function is_ubuntu (
+function is_ubuntu() {
  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     if [ -f /etc/os-release ]; then
       . /etc/os-release
@@ -34,9 +34,9 @@ function is_ubuntu (
     fi
   fi
   return 1
-)
+}
 
-function is_macos {
+function is_macos() {
   if [[ "$OSTYPE" == "darwin"* ]]; then
     return 0
   fi
@@ -44,7 +44,15 @@ function is_macos {
   return 1
 }
 
-function linkDotfile {
+function is_wsl() {
+  if [ -n "$WSLENV" ]; then
+    return 0
+  fi
+
+  return 1
+}
+
+function linkDotfile() {
   dest="${HOME}/${1}"
   dateStr=$(date +%Y-%m-%d-%H%M)
 
@@ -68,16 +76,16 @@ function linkDotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
-function command_exists (
+function command_exists() {
   if ! command -v $1 &> /dev/null
   then
     echo "$1 could not be found"
     return 1
   fi   
-)
+}
 
-function test_requirements (
+function test_requirements() {
   if ! command_exists "git"; then exit 1; fi
   if ! command_exists "curl"; then exit 1; fi
   if ! command_exists "sudo"; then exit 1; fi
-)
+}
