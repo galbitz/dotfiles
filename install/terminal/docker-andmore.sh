@@ -7,7 +7,7 @@ if is_wsl; then return 0; fi
 if is_macos; then return 0; fi
 
 # Exit if already installed
-if [ -f //etc/apt/keyrings/docker.asc ]; then return 0; fi
+if [ -f /etc/apt/keyrings/docker.asc ]; then return 0; fi
 
 # Add Docker's official GPG key:
 sudo apt-get update
