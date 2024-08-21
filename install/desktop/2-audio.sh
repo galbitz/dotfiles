@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# https://c-nergy.be/blog/?p=17734
+
 sudo apt install -y pulseaudio pavucontrol alsa-utils
 
 sudo apt install -y build-essential git dpkg-dev libpulse-dev autoconf libtool
