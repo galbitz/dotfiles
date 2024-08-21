@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew install starships
+brew install starship
 
 mkdir -p $HOME/.config
 linkDotfile .config/starship.toml
