@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -f /usr/share/keyrings/signal-desktop-keyring.gpg ]; then
-    return 0
-fi
+if [ -f /usr/share/keyrings/signal-desktop-keyring.gpg ]; then return 0; fi
 
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
