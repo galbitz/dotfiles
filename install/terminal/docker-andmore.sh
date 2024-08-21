@@ -24,3 +24,7 @@ echo \
 sudo apt-get update
 
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo apt-get -y install podman
+
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
