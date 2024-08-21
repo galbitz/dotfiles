@@ -12,3 +12,5 @@ add_textblock_to_file "$text_block_to_add", ".bashrc"
 add_textblock_to_file "$text_block_to_add", ".zshrc"
 
 linkDotfile .commonrc
+
+source ~/.commonrc
