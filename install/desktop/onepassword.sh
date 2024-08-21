@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -f usr/share/keyrings/1password-archive-keyring.gpg ]; then return 0; fi
+if [ -f /usr/share/keyrings/1password-archive-keyring.gpg ]; then return 0; fi
 
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 
