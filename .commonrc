@@ -7,6 +7,10 @@ if [ -n "$shell" ]; then
     shell_name=$(basename "$shell")
 fi
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # Init starship prompt
 if command -v starship &> /dev/null; then
     eval "$(starship init $shell_name)"
@@ -14,7 +18,3 @@ fi
 
 #command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
 #[ true ]
-
-export XDG_CONFIG_HOME="$HOME/.config"
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
