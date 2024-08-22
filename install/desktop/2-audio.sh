@@ -12,6 +12,8 @@ sudo rm -rf /var/lib/pa-build/
 
 PULSEBUILDDIR=~/build/pulseaudio-module-xrdps
 
+sudo rm -rf $PULSEBUILDDIR
+
 git clone https://github.com/neutrinolabs/pulseaudio-module-xrdp.git "$PULSEBUILDDIR"
 
 pushd "$PULSEBUILDDIR"
