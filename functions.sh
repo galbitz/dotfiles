@@ -15,12 +15,12 @@ function is_debian() {
     if [ -f /etc/os-release ]; then
       . /etc/os-release
       OS=$ID
-      if [[ "$OS" == "debian" ]]; then
-        return 0
-      fi
+      test "$OS" == "debian"
+      return
     fi
   fi
-  return 1
+  false
+  return
 }
 
 function is_ubuntu() {
@@ -28,28 +28,20 @@ function is_ubuntu() {
     if [ -f /etc/os-release ]; then
       . /etc/os-release
       OS=$ID
-      if [[ "$OS" == "ubuntu" ]]; then
-        return 0
-      fi
+      test "$OS" == "ubuntu"
+      return
     fi
   fi
-  return 1
+  false
+  return
 }
 
 function is_macos() {
-  if [[ "$OSTYPE" == "darwin"* ]]; then
-    return 0
-  fi
-
-  return 1
+  test "$OSTYPE" == "darwin"*
 }
 
 function is_wsl() {
-  if [ -n "$WSLENV" ]; then
-    return 0
-  fi
-
-  return 1
+  test -n "$WSLENV"
 }
 
 function linkDotfile() {
