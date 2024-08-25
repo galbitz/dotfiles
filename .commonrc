@@ -9,14 +9,26 @@ fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [ -f /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # Init starship prompt
 if command -v starship &> /dev/null; then
     eval "$(starship init $shell_name)"
 fi
 
-eval "$(fzf --bash)"
+if [[ "$SHELL" == "/bin/bash" ]]; then
+    eval "$(fzf --bash)"
+fi
+
+if [[ "$SHELL" == "/bin/zsh" ]]; then
+    eval "$(fzf --zsh)"
+fi
 
 #command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
 #[ true ]
