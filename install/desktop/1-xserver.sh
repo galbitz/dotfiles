@@ -6,3 +6,4 @@ sudo apt install -y xserver-xorg-core xserver-xorg-video-all xinit xinput x11-xs
 
 # TODO: alacritty is not yet the default as it's not part of brew and debian version is old to handle toml config
 linkDotfile .config/alacritty
+linkDotfile .config/kitty

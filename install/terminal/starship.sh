@@ -2,5 +2,4 @@
 
 brew install starship
 
-mkdir -p $HOME/.config
 linkDotfile .config/starship.toml
