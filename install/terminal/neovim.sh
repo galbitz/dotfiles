@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-brew install neovim
+brew install fd ripgrep neovim
+
+# install lazyvim
