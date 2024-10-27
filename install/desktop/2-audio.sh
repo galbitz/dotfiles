@@ -4,7 +4,7 @@
 
 sudo apt install -y pulseaudio pavucontrol alsa-utils
 
-sudo apt install -y build-essential git dpkg-dev libpulse-dev autoconf libtool
+sudo apt install -y build-essential git dpkg-dev libpulse-dev autoconf libtool automake
 
 mkdir -p ~/build
 
