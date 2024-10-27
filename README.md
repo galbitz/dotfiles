@@ -7,7 +7,7 @@
 ### Installation 
 ```bash
 git clone --recurse-submodules https://github.com/galbitz/dotfiles
-./install.sh
+dotfiles/install.sh
 ```
 launch tmux and CTRL+b SHIFT+i to install plugins
 
@@ -16,3 +16,4 @@ launch tmux and CTRL+b SHIFT+i to install plugins
 * https://github.com/tomnomnom/dotfiles/blob/master/setup.sh
 * https://victoria.dev/blog/how-to-set-up-a-fresh-ubuntu-desktop-using-only-dotfiles-and-bash-scripts/
 * https://github.com/chrisfarber/dotfiles
+* https://github.com/basecamp/omakub
