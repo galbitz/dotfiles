@@ -7,7 +7,8 @@
 ### Installation 
 ```bash
 git clone --recurse-submodules https://github.com/galbitz/dotfiles
-dotfiles/install.sh
+cd dotfiles
+./install.sh
 ```
 launch tmux and CTRL+b SHIFT+i to install plugins
 
