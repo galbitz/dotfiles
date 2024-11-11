@@ -24,10 +24,12 @@ fi
 
 if [[ "$SHELL" == "/bin/bash" ]]; then
     eval "$(fzf --bash)"
+    eval "$(direnv hook bash)"
 fi
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     eval "$(fzf --zsh)"
+    eval "$(direnv hook zsh)"
 fi
 
 #command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
