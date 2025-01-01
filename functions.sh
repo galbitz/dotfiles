@@ -37,7 +37,7 @@ function is_ubuntu() {
 }
 
 function is_macos() {
-  test "$OSTYPE" == "darwin"*
+  command -v sw_vers &> /dev/null
 }
 
 function is_wsl() {

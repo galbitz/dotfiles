@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-sudo apt install luarocks -y
+if ! is_macos; then
+    sudo apt install luarocks -y
+fi
 
 brew install fd ripgrep neovim
 
