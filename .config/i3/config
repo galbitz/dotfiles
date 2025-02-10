@@ -621,3 +621,5 @@ bindsym $mod+t exec --no-startup-id rofi -show window \
 
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
+# enable lock from sleep
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
