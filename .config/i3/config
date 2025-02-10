@@ -521,7 +521,7 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		font pango: Noto Sans Regular 10
+		font pango: CaskaydiaMono NF 10
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	    	position bottom
 #	    	i3bar_command i3bar --transparency
