@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-sudo apt install -y tlp tlp-rdw
+# battery management
 
-sudo tlp start
+sudo apt install tlp -y
+
+sudo cp etc/tlp.d/01-mytlp.conf /etc/tlp.d/01-mytlp.conf
+sudo chown root:root /etc/tlp.d/01-mytlp.conf
+sudo chmod 644 /etc/tlp.d/01-mytlp.conf
+sudo systemctl start tlp
