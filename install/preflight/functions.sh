@@ -44,6 +44,14 @@ function is_wsl() {
   test -n "$WSLENV"
 }
 
+function is_desktop() {
+   test $DESKTOP = " "
+}
+
+function is_laptop() {
+  test `hostname` == "thinkpad"
+}
+
 function linkDotfile() {
   dest="${HOME}/${1}"
   dateStr=$(date +%Y-%m-%d-%H%M)
