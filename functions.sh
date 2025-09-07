@@ -75,9 +75,3 @@ function command_exists() {
     return 1
   fi   
 }
-
-function test_requirements() {
-  if ! command_exists "git"; then exit 1; fi
-  if ! command_exists "curl"; then exit 1; fi
-  if ! command_exists "sudo"; then exit 1; fi
-}
