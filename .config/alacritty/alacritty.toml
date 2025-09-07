@@ -1,4 +1,3 @@
-import = ["~/.config/alacritty/theme/dracula.toml"]
 
 # working_directory = "$HOME"
 
@@ -8,11 +7,13 @@ TERM = "xterm-256color"
 [font]
 
 size = 15.0
-normal.family = "CaskaydiaCove Nerd Font"
-bold.family = "CaskaydiaCove Nerd Font"
-italic.family = "CaskaydiaCove Nerd Font"
-bold_italic.family = "CaskaydiaCove Nerd Font"
+normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
+bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
+italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
 
 [window]
+
+[general]
+import = ["~/.config/alacritty/theme/dracula.toml"]
 
 # decorations = "Buttonless"
