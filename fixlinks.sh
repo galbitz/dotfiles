@@ -17,3 +17,5 @@ linkDotfile .config/i3
 linkDotfile .config/rofi
 
 linkDotfile .config/k9s
+
+linkDotfile .config/sway
