@@ -18,6 +18,7 @@ if is_debian || is_wsl; then
 fi
 
 source install/shared/brew.sh
+source ~/.commonrc
 source install/shared/lazygit.sh
 
 if is_laptop; then
@@ -30,5 +31,6 @@ if is_desktop; then
   source install/desktop/sway.sh
 fi
 
+source ~/.commonrc
 echo "Dotfile install completed."
 echo "Reboot"
