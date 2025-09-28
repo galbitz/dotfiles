@@ -6,7 +6,7 @@
 
 ### Installation 
 ```bash
-git clone --recurse-submodules https://github.com/galbitz/dotfiles
+git clone https://github.com/galbitz/dotfiles
 cd dotfiles
 ./install.sh
 ```
