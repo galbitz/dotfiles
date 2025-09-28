@@ -19,7 +19,9 @@ fi
 
 source install/shared/brew.sh
 source ~/.commonrc
+source install/shared/more-basic-tools.sh
 source install/shared/lazygit.sh
+source install/shared/add-github-keys.sh
 
 if is_laptop; then
   source install/thinkpad/tlp.sh
