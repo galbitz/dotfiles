@@ -26,6 +26,10 @@ source install/shared/starship.sh
 source install/shared/tmux.sh
 source install/shared/neovim.sh
 
+if is_debian; then
+  source install/linux/docker-andmore.sh
+fi
+
 if is_laptop; then
   source install/thinkpad/tlp.sh
   source install/thinkpad/brightness.sh
