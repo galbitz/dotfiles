@@ -2,4 +2,6 @@
 
 mkdir -p $HOME/.config/tmux
 linkDotfile .config/tmux/tmux.conf
-linkDotfile .config/tmux/plugins
+
+mkdir -p $HOME/.config/tmux_plugins
+git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux_plugins/tpm
