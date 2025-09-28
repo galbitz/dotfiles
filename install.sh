@@ -24,6 +24,7 @@ source install/shared/lazygit.sh
 source install/shared/add-github-keys.sh
 source install/shared/starship.sh
 source install/shared/tmux.sh
+source install/shared/neovim.sh
 
 if is_laptop; then
   source install/thinkpad/tlp.sh
