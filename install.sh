@@ -28,6 +28,7 @@ source install/shared/neovim.sh
 
 if is_debian; then
   source install/linux/docker-andmore.sh
+  source install/linux/lazydocker.sh
 fi
 
 if is_laptop; then
