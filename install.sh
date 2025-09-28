@@ -42,6 +42,7 @@ if is_desktop; then
   source install/desktop/audio-tools.sh
   source install/desktop/vscode.sh
   source install/desktop/flatpak-and-apps.sh
+  source install/desktop/onepassword.sh
 fi
 
 source ~/.commonrc
