@@ -19,7 +19,7 @@ fi
 
 source install/shared/brew.sh
 source ~/.commonrc
-source install/shared/more-basic-tools.sh
+source install/shared/brew-apps.sh
 source install/shared/lazygit.sh
 source install/shared/add-github-keys.sh
 source install/shared/starship.sh
