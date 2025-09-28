@@ -2,4 +2,4 @@
 
 sudo apt install -y brightnessctl
 
-sudo brightnessctl set 20%
+# sudo brightnessctl set 20%
