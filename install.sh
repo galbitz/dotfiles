@@ -39,6 +39,7 @@ fi
 if is_desktop; then
   source install/desktop/fonts.sh
   source install/desktop/sway.sh
+  source install/desktop/audio-tools.sh
   source install/desktop/vscode.sh
 fi
 
