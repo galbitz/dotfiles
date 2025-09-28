@@ -22,6 +22,7 @@ source ~/.commonrc
 source install/shared/more-basic-tools.sh
 source install/shared/lazygit.sh
 source install/shared/add-github-keys.sh
+source install/shared/starship.sh
 
 if is_laptop; then
   source install/thinkpad/tlp.sh

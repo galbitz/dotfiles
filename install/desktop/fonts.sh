@@ -4,17 +4,24 @@ echo "Installing fonts"
 
 mkdir -p ~/.local/share/fonts/
 
-wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip
-unzip -o CascadiaMono.zip -d ~/.local/share/fonts/CascadiaMono
-rm CascadiaMono.zip
+if ! fc-list -q "CaskaydiaMonoNerdFont"; then
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip
+	unzip -o CascadiaMono.zip -d ~/.local/share/fonts/CascadiaMono
+	rm CascadiaMono.zip
+fi
 
-wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
-unzip -o FiraCode.zip -d ~/.local/share/fonts/FiraCode
-rm FiraCode.zip
+if ! fc-list -q "FiraCodeNerdFontMono"; then
+	wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
+	unzip -o FiraCode.zip -d ~/.local/share/fonts/FiraCode
+	rm FiraCode.zip
+fi
 
-wget -O fontawesome.zip https://github.com/FortAwesome/Font-Awesome/releases/download/7.0.1/fontawesome-free-7.0.1-desktop.zip
-unzip -o fontawesome.zip -d ~/.local/share/fonts/fontawesome 
-rm fontawesome.zip
+if ! fc-list -q "Font Awesome 7 Free"; then
+	wget -O fontawesome.zip https://github.com/FortAwesome/Font-Awesome/releases/download/7.0.1/fontawesome-free-7.0.1-desktop.zip
+	unzip -o fontawesome.zip -d ~/.local/share/fonts/fontawesome 
+	rm fontawesome.zip
+fi
 
-fc-cache -f -v
+echo "Refreshing font cache"
+fc-cache -f
 
