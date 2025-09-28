@@ -41,6 +41,7 @@ if is_desktop; then
   source install/desktop/sway.sh
   source install/desktop/audio-tools.sh
   source install/desktop/vscode.sh
+  source install/desktop/flatpak-and-apps.sh
 fi
 
 source ~/.commonrc
