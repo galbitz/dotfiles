@@ -50,6 +50,9 @@ include /etc/sway/config-vars.d/*
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 for_window [app_id="firefox"] inhibit_idle fullscreen
+for_window [title="Shadow PC - Display"] inhibit_idle fullscreen
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
 
 ### Input configuration
 #
