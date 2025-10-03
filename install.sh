@@ -11,6 +11,7 @@ source install/preflight/guard.sh
 source install/shared/git.sh
 source install/shared/shell.sh
 source ~/.commonrc
+source install/preflight/gum.sh
 
 if is_debian || is_wsl; then
   source install/linux/pwdless-sudo.sh
@@ -43,6 +44,7 @@ if is_desktop; then
   source install/desktop/vscode.sh
   source install/desktop/flatpak-and-apps.sh
   source install/desktop/onepassword.sh
+  source install/optional/optional.sh
 fi
 
 source ~/.commonrc
