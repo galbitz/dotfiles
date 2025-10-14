@@ -11,11 +11,11 @@ source install/preflight/guard.sh
 source install/shared/git.sh
 source install/shared/commonrc.sh
 source home/.commonrc
-source install/preflight/gum.sh
 
 if is_debian || is_wsl; then
   source install/linux/pwdless-sudo.sh
   source install/linux/core-linux-utils.sh
+  source install/linux/gum.sh
 fi
 
 source install/shared/brew.sh
