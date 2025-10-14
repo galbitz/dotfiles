@@ -10,7 +10,7 @@ source install/preflight/guard.sh
 
 source install/shared/git.sh
 source install/shared/commonrc.sh
-source ~/.commonrc
+source home/.commonrc
 source install/preflight/gum.sh
 
 if is_debian || is_wsl; then
@@ -19,8 +19,10 @@ if is_debian || is_wsl; then
 fi
 
 source install/shared/brew.sh
-source ~/.commonrc
+source home/.commonrc
 source install/shared/brew-apps.sh
+#stow goes after brew apps
+source link-config.sh
 source install/shared/lazygit.sh
 source install/shared/add-github-keys.sh
 source install/shared/starship.sh
@@ -47,6 +49,6 @@ if is_desktop; then
   source install/optional/optional.sh
 fi
 
-source ~/.commonrc
+source home/.commonrc
 echo "Dotfile install completed."
 echo "Reboot"

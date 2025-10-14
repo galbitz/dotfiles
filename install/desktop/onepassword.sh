@@ -11,4 +11,3 @@ sudo apt update
 sudo apt install -y 1password  1password-cli
 
 # additional notes: open seahorse, add password keyring (name default), set as default (right click men)
-

@@ -24,4 +24,3 @@ fi
 
 echo "Refreshing font cache"
 fc-cache -f
-
