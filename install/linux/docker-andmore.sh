@@ -1,14 +1,7 @@
 #!/usr/bin/env bash
 
-# Exit if wsl
-if is_wsl; then return 0; fi
-
-# Exit if mac os
-if is_macos; then return 0; fi
-
 # Exit if already installed
 if [ -f /usr/share/keyrings/docker.gpg ]; then return 0; fi
-
 
 echo "Installing docker"
 
@@ -32,3 +25,5 @@ sudo apt install -y podman
 
 echo "Installing distrobox"
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+
+echo "Docker install completed."

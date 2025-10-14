@@ -6,5 +6,3 @@ sudo apt install -y thunar
 
 # terminal tools
 sudo apt install -y alacritty kitty
-linkDotfile .config/alacritty
-linkDotfile .config/kitty
