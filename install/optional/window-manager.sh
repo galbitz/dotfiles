@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Choose vindow manager"
+echo "Choose window manager"
 
 VM=$(gum choose "sway" "i3" "none" )
 
