@@ -46,7 +46,8 @@ if is_desktop; then
   source install/desktop/vscode.sh
   source install/desktop/flatpak-and-apps.sh
   source install/desktop/onepassword.sh
-  source install/optional/optional.sh
+  source install/optional/window-manager.sh
+  source install/desktop/sublime.sh
 fi
 
 source home/.commonrc
