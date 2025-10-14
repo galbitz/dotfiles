@@ -9,7 +9,7 @@ source install/preflight/functions.sh
 source install/preflight/guard.sh
 
 source install/shared/git.sh
-source install/shared/shell.sh
+source install/shared/commonrc.sh
 source ~/.commonrc
 source install/preflight/gum.sh
 
