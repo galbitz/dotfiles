@@ -38,3 +38,5 @@ fi
 
 #command -v tmux &> /dev/null && [ -z $TMUX ] && exec tmux
 #[ true ]
+
+set -o vi
