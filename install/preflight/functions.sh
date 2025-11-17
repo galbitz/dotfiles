@@ -45,7 +45,7 @@ function is_wsl() {
 }
 
 function is_desktop() {
-   test "$XDG_CURRENT_DESKTOP" == "GNOME"
+  test -n "$XDG_SESSION_TYPE"
 }
 
 function is_laptop() {
