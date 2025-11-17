@@ -2,4 +2,4 @@
 
 sudo apt update -y
 
-sudo apt install -y git curl wget htop openssh-client mc tmux unzip build-essential gcc 
+sudo apt install -y git curl wget htop openssh-client mc tmux unzip build-essential gcc gpg
