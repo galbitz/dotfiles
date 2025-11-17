@@ -45,7 +45,7 @@ function is_wsl() {
 }
 
 function is_desktop() {
-   test $XDG_CURRENT_DESKTOP == "GNOME"
+   test "$XDG_CURRENT_DESKTOP" == "GNOME"
 }
 
 function is_laptop() {
