@@ -35,8 +35,9 @@ if is_debian; then
 fi
 
 if is_laptop; then
-  source install/thinkpad/tlp.sh
+  # source install/thinkpad/tlp.sh
   source install/thinkpad/brightness.sh
+  source install/thinkpad/battery-charge.sh
 fi
 
 if is_desktop; then
