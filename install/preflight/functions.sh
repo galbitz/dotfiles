@@ -1,14 +1,6 @@
+#!/usr/bin/env bash
+
 # global helper functions
-
-function add_textblock_to_file() {
-    text_block="$1"
-    rcfile="$HOME/$2"
-
-    if ! grep -qF "$text_block" "$rcfile"; then
-        echo "Adding bash extra to bashfile"
-        echo "$text_block" >> "$rcfile"
-    fi
-}
 
 function is_debian() {
  if [[ "$OSTYPE" == "linux-gnu"* ]]; then

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if command -v mise &> /dev/null; then
+    eval "$(mise activate $shell_name)"
+fi
+
+
