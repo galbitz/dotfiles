@@ -3,8 +3,9 @@
 function add_textblock_to_file() {
     text_block="$1"
     rcfile="$HOME/$2"
+    marker="# dotfile block starts"
 
-    if ! grep -qF "$text_block" "$rcfile"; then
+    if ! grep -qF "$marker" "$rcfile"; then
         echo "Adding bash extra to bashfile"
         echo "$text_block" >> "$rcfile"
     fi
@@ -28,6 +29,6 @@ stow -v -R -t ~ -d home .
 echo "Setting up config files"
 touch "$HOME/.bashrc"
 touch "$HOME/.zshrc"
-add_textblock_to_file "$text_block_to_add", ".bashrc"
-add_textblock_to_file "$text_block_to_add", ".zshrc"
+add_textblock_to_file "$text_block_to_add" ".bashrc"
+add_textblock_to_file "$text_block_to_add" ".zshrc"
 
