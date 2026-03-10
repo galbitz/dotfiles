@@ -1,0 +1,3 @@
+export PATH="$HOME/.local/share/omarchy/bin:$PATH"
+
+exec niri-session
