@@ -6,10 +6,11 @@ omarchy-pkg-add stow
 
 echo "Writing ~/.stow-global-ignore"
 
-rm ~/.config/starship.toml
+rm -f ~/.config/starship.toml
 
 cat > ~/.stow-global-ignore <<EOF
 kitty
 alacritty
 waybar
+tmux
 EOF

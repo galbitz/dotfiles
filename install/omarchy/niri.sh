@@ -6,7 +6,7 @@ sudo pacman -S --noconfirm niri xdg-desktop-portal-gnome wtype waybar foot swayb
 
 echo "Deploying niri session launcher"
 
-cp niri-session.sh ~/niri.sh
+cp install/omarchy/niri-session.sh ~/niri.sh
 chmod +x ~/niri.sh
 
 echo "Disabling autologin in SDDM"
