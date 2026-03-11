@@ -2,7 +2,7 @@
 
 echo "Installing niri"
 
-sudo pacman -S --noconfirm niri xdg-desktop-portal-gnome wtype waybar foot swaybg wl-clipboard grim slurp mako
+sudo pacman -S --noconfirm niri xdg-desktop-portal-gnome wtype waybar foot swaybg wl-clipboard grim slurp mako swayidle swaylock
 
 echo "Deploying niri session launcher"
 
@@ -24,3 +24,21 @@ Exec=/home/gabor/niri.sh
 Type=Application
 DesktopNames=niri
 EOF
+
+echo "Configuring niri services"
+systemctl --user add-wants niri.service mako.service
+systemctl --user add-wants niri.service waybar.service
+
+tee ~/.config/systemd/user/swayidle.service > /dev/null <<EOF
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f'
+Restart=on-failure
+EOF
+
+systemctl --user daemon-reload
+systemctl --user add-wants niri.service swayidle.service
