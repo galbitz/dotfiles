@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo "Niri local"
+mkdir -p ~/.config/niri
+[ -f ~/.config/niri/local.kdl ] || touch ~/.config/niri/local.kdl
+
 echo "Installing stow"
 
 omarchy-pkg-add stow

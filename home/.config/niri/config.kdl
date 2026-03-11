@@ -3,6 +3,7 @@
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
+include "local.kdl"
 
 // Input device configuration.
 // Find the full list of options on the wiki:
@@ -77,7 +78,7 @@ input {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-output "eDP-1" {
+/-output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -108,7 +109,7 @@ output "eDP-1" {
     position x=2560 y=0
 }
 
-output "DP-4" {
+/-output "DP-4" {
   mode  "3840x2160@60"
   scale 1.5
   position x=0 y=0

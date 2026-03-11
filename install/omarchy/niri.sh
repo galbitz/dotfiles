@@ -11,7 +11,7 @@ chmod +x ~/niri.sh
 
 echo "Disabling autologin in SDDM"
 
-sudo sed -i '/^\[Autologin\]/,/^\[/ s/^\([^[]\)/#\1/' /etc/sddm.conf.d/autologin.conf
+sudo sed -i '/^\[Autologin\]/,/^\[/ s/^\([^[#]\)/#\1/' /etc/sddm.conf.d/autologin.conf
 sudo sed -i '/^\[Theme\]/,/^\[/ s/^\(Current\)/#\1/' /etc/sddm.conf.d/autologin.conf
 
 echo "Creating niri desktop session entry"
