@@ -377,7 +377,8 @@ binds {
     Mod+SHIFT+SPACE hotkey-overlay-title="Omarchy menu" { spawn "omarchy-menu"; }
     Mod+B hotkey-overlay-title="Run browser" { spawn "omarchy-launch-browser"; }
     Mod+Shift+B hotkey-overlay-title="Run browser incognito" { spawn "omarchy-launch-browser" "--incognito"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "sh" "-c" "swaylock & sleep 1 && niri msg action power-off-monitors"; }
+    Mod+X hotkey-overlay-title="Toggle voxtype" { spawn "voxtype" "record" "toggle"; }
 
     Super+C { spawn "wtype" "-M" "ctrl" "-k" "Insert" "-m" "ctrl"; }
     Super+V { spawn "wtype" "-M" "shift" "-k" "Insert" "-m" "shift"; }
